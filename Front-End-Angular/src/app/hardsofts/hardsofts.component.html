@@ -1,0 +1,276 @@
+<div id="cuerpo" class="col-ms-12 col-xs-12">
+ 
+    <!------------------------Comienzo Hard & Soft Skills-->
+    <br><br>
+          <h2 id="hardand" style="text-align:center ; font-size: 35px;" >Hard & Soft Skills</h2>
+          <br>
+          <br>
+          <div class="container-fluid" >
+            <h2 style="font-family: Barlow; font-size: 35px; text-align: center;">Soft Skills</h2>
+            <span *ngIf="ha== false else abrielcoso1"></span>
+    <ng-template #abrielcoso1>
+            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open4(content4)">Editar</button>
+            </ng-template>
+            <br> <br>
+    
+          </div>
+          <br><br>
+          
+          <div class="container" style="margin:0 auto ;">
+            <ng-template #content4 let-modal>
+              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Actualizar Softs Skills</h4>
+                <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <div class="container">
+                        <label for="dateOfBirth"><h3 style="color:#9b9922">Título</h3></label>
+                        <textarea id="dateOfBirth" name="trabajotitulo" [(ngModel)]="editarSofts1.trabajotitulo" class="form-control"></textarea> <br>
+                        <label for="dateOfBirth"><h6 style="color:#9b9922">Datos</h6></label>
+                      <textarea id="dateOfBirth" name="trabajodato" class="form-control" [(ngModel)]="editarSofts1.trabajodato"></textarea> <br>
+                      <label for="dateOfBirth"><h3 style="color:#9b9922">Título</h3></label>
+                      <textarea id="dateOfBirth" name="comunicaciontitulo" class="form-control" [(ngModel)]="editarSofts1.comunicaciontitulo"></textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Datos</h6></label>
+                      <textarea id="dateOfBirth" name="comunicaciondato" class="form-control" [(ngModel)]="editarSofts1.comunicaciondato"></textarea> <br>
+                      <label for="dateOfBirth"><h3 style="color:#9b9922">Título</h3></label>
+                      <textarea id="dateOfBirth" name="creatividadtitulo" class="form-control"[(ngModel)]="editarSofts1.creatividadtitulo" ></textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922" >Datos</h6></label>
+                      <textarea id="dateOfBirth" name="creatividaddato" class="form-control" [(ngModel)]="editarSofts1.creatividaddato"></textarea> <br>
+                      <label for="dateOfBirth"><h3 style="color:#9b9922">Título</h3></label>
+                      <textarea id="dateOfBirth" name="adaptaciontitulo" class="form-control" [(ngModel)]="editarSofts1.adaptaciontitulo"></textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Datos</h6></label>
+                      <textarea id="dateOfBirth" name="adaptaciondato" class="form-control" [(ngModel)]="editarSofts1.adaptaciondato"></textarea> <br>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+                <button type="button" id="btn" class="btn btn-warning">Borrar datos</button>
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarSofts()" (click)="modal.close('Save click')">Guardar</button>
+              </div>
+            </ng-template> 
+            
+            <div class="card"  id="card" >
+              <h3> {{miPorfolio5.trabajotitulo}}</h3>
+               
+              <br>
+              <div class="container " > 
+              </div>
+             
+              <br>
+              <i id="icono" class="fa-solid fa-people-carry-box"></i>
+              <br>
+                <br>
+              
+                <h5>{{miPorfolio5.trabajodato}}</h5>
+              
+          </div>
+          
+          <br>
+          <div class="card" id="card" >
+            <div class="container" >  
+            <h3>{{miPorfolio5.comunicaciontitulo}}</h3>
+            <br>
+            
+            <br>
+            <br>
+            <i id="icono1" class="fa-solid fa-comments"></i>
+            <br>
+            <br>
+          
+            <h6>{{miPorfolio5.comunicaciondato}}</h6>
+         
+          </div>
+          </div>
+          <br>
+          <div class="card" id="card">
+            <div class="container">
+            <h3>{{miPorfolio5.creatividadtitulo}}</h3>
+            <br>
+            
+            <br>
+            <br>
+            <i id="icono2" class="fa-solid fa-paintbrush"></i>
+            <br>
+            <br>
+            
+            <h6>{{miPorfolio5.creatividaddato}}</h6>
+            
+          </div>
+        </div>
+          <br>
+            <div class="card" id="card">
+              <div class="container">
+            <h3>{{miPorfolio5.adaptaciontitulo}}</h3>
+            <br>
+            
+            <br>
+            <br>
+            <i id="icono3" class="fa-solid fa-arrow-right-arrow-left"></i>
+            <br>
+            <br>
+            <h6>{{miPorfolio5.adaptaciondato}}</h6>
+            
+          </div>
+          </div>
+            
+          </div>
+    
+          <br><br>
+          
+          <ng-template #content9 let-modal>
+              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
+               
+                <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <div class="container">
+                        <h3 style="color:#9b9922">Front End</h3>
+                        <label for="dateOfBirth"><h6 style="color:#9b9922">JavaScript</h6></label>
+                      <input id="dateOfBirth" name="javaScript" [(ngModel)]="miPorfolio6.javaScript" type="number" class="form-control">
+                      <br>
+                      
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Angular</h6></label>
+                      <input id="dateOfBirth" name="angular" [(ngModel)]="miPorfolio6.angular" type="number" class="form-control">
+                      <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">HTML</h6></label>
+                      <input id="dateOfBirth" name="html" [(ngModel)]="miPorfolio6.html" type="number" class="form-control">
+                      <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">CSS - SASS - Grid - Less</h6></label>
+                      <input id="dateOfBirth" name="css" [(ngModel)]="miPorfolio6.css" type="number" class="form-control">
+                      <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Bootstrap</h6></label>
+                      <input id="dateOfBirth" name="bootstrap" [(ngModel)]="miPorfolio6.bootstrap" type="number" class="form-control">
+                     
+                      <br>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarHardSkills1()" (click)="modal.close('Save click')">Guardar</button>
+              </div>
+            </ng-template>
+          <div class="container-fluid">
+            <br><br>
+            <h2 style="font-family: Barlow; font-size:35px; text-align: center;">Hard Skills</h2>
+            <br><br>
+            <h2 style="font-family: Barlow; font-size: 25px; text-align: center;">Front End</h2>
+            <ng-template #content10 let-modal>
+              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
+                <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <div class="container">
+                        
+                      <h3 style="color:#9b9922">Back End</h3>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Java</h6></label>
+                      <input id="dateOfBirth" name="java" [(ngModel)]="miPorfolio6.java" type="number" class="form-control">
+                      <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Spring Boot</h6></label>
+                      <input id="dateOfBirth" name="springboot" [(ngModel)]="miPorfolio6.springboot" type="number" class="form-control">
+                      <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">MySQL</h6></label>
+                      <input id="dateOfBirth" name="mysql" [(ngModel)]="miPorfolio6.mysql" type="number" class="form-control">
+                      <br>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarHardSkills1()" (click)="modal.close('Save click')">Guardar</button>
+              </div>
+            </ng-template>
+            <span *ngIf="ha== false else abrielcoso2"></span>
+            <ng-template #abrielcoso2>
+            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open9(content9)">Editar</button>
+            </ng-template>
+            <br><br>
+            <h3>JavaScript</h3> <i id="javascript" class="fa-brands fa-js-square"></i>
+            <br>
+            <p>
+              <ngb-progressbar class="progreso" [showValue]="true" type="warning" [value]="miPorfolio6.javaScript" [max]="100" [striped]="false"
+              [animated]="true"></ngb-progressbar>
+            </p>
+            <br><br><br>
+            <h3>Angular</h3> <i id="angular" class="fa-brands fa-angular"></i>
+            <br>
+            <p>
+              <ngb-progressbar class="progreso" [showValue]="true" type="danger" [value]="miPorfolio6.angular" [max]="100" [striped]="false"
+                [animated]="true"></ngb-progressbar>
+            </p>
+            <br><br><br>
+            <h3>HTML</h3> <i id="html" class="fa-brands fa-html5"></i>
+            <br>
+            <p>
+              <ngb-progressbar class="progreso" [showValue]="true" type="success" [value]="miPorfolio6.html" [max]="100" [striped]="false"
+                [animated]="true"></ngb-progressbar>
+            </p>
+            <br><br><br>
+            <h3>CSS - SASS - Grid - Less</h3><br><i id="css" class="fa-brands fa-css3-alt"></i> <i id="sass" class="fa-brands fa-sass"></i>  <img id="grid" src="assets/imgs/grid.png" alt="" srcset=""> <i id="less" class="fa-brands fa-less"></i>
+           
+              <ngb-progressbar id="barrita" id="skilcss" style="margin-top: -40px;" class="progreso" [showValue]="true" type="primary" [value]="miPorfolio6.css" [max]="100" [striped]="false"
+                [animated]="true"></ngb-progressbar>
+           
+            <br><br><br>
+            <h3>Bootstrap</h3>  <i id="bootstrap" class="fa-brands fa-bootstrap"></i>
+            <br>
+            <p>
+              <ngb-progressbar class="progreso"  [showValue]="true" style="color: rgb(120, 41, 211)" [value]="miPorfolio6.bootstrap" [max]="100" [striped]="false"
+                [animated]="true"></ngb-progressbar>
+            </p>
+            <br><br><br>
+            <h2 style="font-family: Barlow; font-size:35px; text-align: center;">Hard Skills</h2>
+            <br><br>
+            <h2 style="font-family: Barlow; font-size: 25px; text-align: center;"> Back End</h2>
+            <span *ngIf="ha== false else abrielcoso"></span>
+            <ng-template #abrielcoso>
+            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open10(content10)">Editar</button>
+            </ng-template>
+            <br>
+            <br>
+            <h3>Java</h3> 
+            <img alt="spring" style="width:80px; height:120px; margin-bottom: 15px;" src="assets/imgs/java.png">
+            <br>
+            <ngb-progressbar class="progreso" [showValue]="true" type="danger" [value]="miPorfolio6.java" [max]="100" [striped]="false"
+            [animated]="true"></ngb-progressbar>
+            <br><br><br>      
+             <h3>Spring Boot</h3> 
+             <img alt="spring" style="width:200px; height:100px" src="assets/imgs/spring-boot.png">
+             <br>
+             
+             <ngb-progressbar class="progreso" [showValue]="true" type="success" [value]="miPorfolio6.springboot" [max]="100" [striped]="false"
+             [animated]="true"></ngb-progressbar>
+             
+             <br><br><br>
+             <h3>MySQL</h3> 
+             <img alt="spring" style="width:170px; height:110px;" src="assets/imgs/mysql.png">
+             <p>
+               <br>
+               <ngb-progressbar class="progreso" [showValue]="true" type="primary" [value]="miPorfolio6.mysql" [max]="100" [striped]="false"
+               [animated]="true"></ngb-progressbar>
+              </p>
+              <br>
+              <br>
+            </div>
+    
+              <!-----------------------------Fin Hard & Soft Skills-->
+    

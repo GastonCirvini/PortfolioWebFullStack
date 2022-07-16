@@ -1,0 +1,181 @@
+<!----Imagen Fondo -->
+<div id="cajun" style="height: 27%;">
+  <img src={{miPorfolio7.portada}} style="width:100%; height:auto;" id="portadita"  alt="Portada">
+
+</div>
+
+
+<ng-template  #content7 let-modal>
+<div style="background-color:rgb(73, 52, 90);" class="modal-header">
+  <h4  id="modal-basic-title">Modificar Imagen de Portada</h4>
+  <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+</div>
+<div style="background-color: rgb(31, 21, 39);" class="modal-body">
+  <form  novalidate enctype="multipart/form-data" (ngSubmit)="onUpload()">
+    <div class="custom-file">
+      <div class="input-group">
+        <div class="container">
+          <label id="imagen"><h6 style="color:#9b9922">Elegir imagen</h6></label>
+          <input type="file" alife-file-to-base64 (onFileChanged)="onFileChange3($event)" required accept="image/png, image/gif, image/jpeg">
+      </div>
+  
+      <div>
+        <img  style="max-width: 100px" alt="" class="image-thumbnail">
+      </div>
+      <div class="form-group d-flex justify-content-between">
+        <br> <br>
+        <button type="submit" class="btn btn-outline-success" (click)="onUpload()" >Subir</button>
+      </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+  <button type="button" id="btn" class="btn btn-warning" (click)="modal.close('Save click')">Salir</button>
+</div>
+</ng-template>
+
+<!-----Imagen Fondo FIN-->
+
+<!-------------------Cuerpo de la página - Contenido-->
+
+<div id="cuerpo" class="col-ms-12 col-xs-12">
+  <span  *ngIf="ha== false else abrielcoso"></span>
+  <ng-template  #abrielcoso>
+  <button  class="btn btn-lg btn-outline-primary modalito" id="btn"  (click)="open7(content7)">Editar imagen de Portada</button> 
+  </ng-template>
+<div id="primeraparte" class="container-fluid">
+<!----Imágen de perfil-->
+<br>
+<div class="container">
+  <ng-template #content6 let-modal>
+    <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+     
+      <h4 class="modal-title" id="modal-basic-title">Modificar Imagen de Perfil</h4>
+      <br>
+      <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+      <form  novalidate enctype="multipart/form-data" (ngSubmit)="onUpload()">
+        <div class="custom-file">
+          <div class="input-group">
+            <div class="container">
+              <br>
+              <label id="imagen"><h6 style="color:#9b9922">Elegir imagen</h6></label>
+              <input  type="file" alife-file-to-base64 (onFileChanged)="onFileChange2($event)" class="form-control-file" required accept="image/png, image/gif, image/jpeg">
+            
+          </div>
+          <div  class="mt-5"></div>
+          <div class="form-group d-flex justify-content-between">
+            <button type="submit" class="btn btn-outline-success" (click)="onUpload()" >Subir</button>
+          </div>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+    <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+      <button type="button" id="btn" class="btn btn-warning" (click)="modal.close('Save click')">Salir</button>
+    </div>
+  </ng-template> 
+</div>
+
+
+  <!----Ng template de modificación - INICIO-->
+<ng-template #content let-modal>
+  <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
+    <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+    <form #formatForm="ngForm">
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="container">
+            <label><h6 style="color:#9b9922">Titulo Principal</h6></label>
+            
+          <textarea type="text" name="nombreytitulo" [(ngModel)]="editarPresentacion.nombreytitulo" class="form-control">{{miPorfolio.nombreytitulo}}</textarea> 
+          <br>
+          
+          <label><h6 style="color:#9b9922">Nacimiento</h6></label> <br>
+          <textarea type="text" name="nacimiento"  [(ngModel)]="editarPresentacion.nacimiento" class="form-control">{{editarPresentacion.nacimiento}} </textarea>
+          <br>
+          <label ><h6 style="color:#9b9922">Lugar de Residencia</h6></label> <br>
+          <textarea type="text" name="residencia" [(ngModel)]="editarPresentacion.residencia"  class="form-control">{{miPorfolio.residencia}} </textarea>
+          <br>
+          <label ><h6 style="color:#9b9922">Edad</h6></label> <br>
+          <textarea name="edad" [(ngModel)]="editarPresentacion.edad" class="form-control">{{miPorfolio.edad}}</textarea>
+          <br>
+          <label ><h6 style="color:#9b9922">Estudios</h6></label> 
+          <br>
+          <p style="color:#9b9922">Estudios 1</p>
+          <textarea type="text" name="estudios"  [(ngModel)]="editarPresentacion.estudios" class="form-control">{{miPorfolio.estudios}}</textarea>
+          <br>
+          <p style="color:#9b9922">Estudios 2</p>
+          <textarea type="text" name="estudios2"  [(ngModel)]="editarPresentacion.estudios2" class="form-control">{{miPorfolio.estudios2}}</textarea>
+          <br>
+          <p style="color:#9b9922">Estudios 3</p>
+          <textarea type="text"name="estudios3" [(ngModel)]="editarPresentacion.estudios3" class="form-control">{{miPorfolio.estudios3}}</textarea>
+          <br>
+          <p style="color:#9b9922">Estudios 4</p>
+          <textarea type="text"name="estudios4" [(ngModel)]="editarPresentacion.estudios4" class="form-control">{{miPorfolio.estudios4}}</textarea>
+          <br>
+          <label><h6 style="color:#9b9922">E-mail</h6></label> <br>
+          <textarea type="text" name="email" [(ngModel)]="editarPresentacion.email" class="form-control">{{miPorfolio.email}}</textarea>
+      
+        </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+    <button type="button" id="btn" (click)="borrarPresentacion()" class="btn btn-warning">Borrar datos</button>
+    <button type="button" id="btn" class="btn btn-warning" (click)="editarPresentacion1()" (click)="modal.close('Save click')">Guardar</button>
+  </div>
+</ng-template>
+
+<!----Ng template de modificación - FIN-->
+
+
+
+<div class="container" style="margin:0 auto ;">
+
+<img class="img-thumbnail rounded-circle mb-4"  src={{miPorfolio7.perfil}}  alt="">
+</div>
+<span *ngIf="ha== false else abrielcoso2"></span>
+<ng-template #abrielcoso2>
+<button class="btn btn-lg btn-outline-primary" id="btn" (click)="open6(content6)">Editar imagen de Perfil</button> 
+</ng-template>
+
+<br>
+<h1 id="tituloh1">José Gastón Cirvini - Full Stack Developer Junior</h1>
+<br>
+<h2 id="presentacion">Presentación</h2>
+<br>
+<span *ngIf="ha== false else abrielcoso3"></span>
+<ng-template #abrielcoso3>
+<button class="btn btn-lg btn-outline-primary" id="btn" (click)="open(content)">Editar</button>
+</ng-template>
+<br>
+<h3 id="nac">Nacimiento</h3>
+<h6>{{miPorfolio.nacimiento}}</h6>
+<br>
+<h3 id="residencia">Lugar de residencia</h3>
+<h6>{{miPorfolio.residencia}}</h6>
+<br>
+<h3 id="edad">Edad</h3>
+<h6>{{miPorfolio.edad}}</h6>
+<br>
+<h3 id="estudios">Estudios</h3>
+<br>
+<h6>{{miPorfolio.estudios}}</h6>
+<br>
+<h6>{{miPorfolio.estudios2}}</h6>
+<br>
+<h6>{{miPorfolio.estudios3}}</h6> 
+<br>
+<h6>{{miPorfolio.estudios4}}</h6>
+<h3 id="mail">E-mail</h3>
+<h5>{{miPorfolio.email}}</h5>
+</div>
+<br><br>

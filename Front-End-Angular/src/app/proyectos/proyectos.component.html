@@ -1,0 +1,71 @@
+<div id="cuerpo" class="col-ms-12 col-xs-12">
+
+          <div id="proyectoscaja" class="container-fluid">
+            <ng-template #content5 let-modal>
+              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Actualizar Proyectos</h4>
+                <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <div class="container">
+                        <label for="dateOfBirth"><h6 style="color:#9b9922">Titulo</h6></label>
+                        <textarea id="dateOfBirth" name="titulo" [(ngModel)]="editarProyecto.titulo" class="form-control">{{miPorfolio4.titulo}}</textarea> <br>
+                        <label for="dateOfBirth" ><h6 style="color:#9b9922">Proyecto 1</h6></label>
+                      <textarea id="dateOfBirth"name="proyecto" [(ngModel)]="editarProyecto.proyecto" class="form-control">{{miPorfolio4.proyecto}}</textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Proyecto 2</h6></label>
+                      <textarea id="dateOfBirth"name="proyecto1" [(ngModel)]="editarProyecto.proyecto1" class="form-control">{{miPorfolio4.proyecto1}}</textarea><br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Proyecto 3</h6></label>
+                      <textarea id="dateOfBirth" name="proyecto2" [(ngModel)]="editarProyecto.proyecto2" class="form-control">{{miPorfolio4.proyecto2}}</textarea><br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Proyecto 4</h6></label>
+                      <textarea id="dateOfBirth"name="proyecto3" [(ngModel)]="editarProyecto.proyecto3" class="form-control">{{miPorfolio4.proyecto3}}</textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Proyecto 5</h6></label>
+                      <textarea id="dateOfBirth"name="proyecto4" [(ngModel)]="editarProyecto.proyecto4" class="form-control">{{miPorfolio4.proyecto4}}</textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Proyecto 6</h6></label>
+                      <textarea id="dateOfBirth" name="proyecto5"[(ngModel)]="editarProyecto.proyecto5" class="form-control">{{miPorfolio4.proyecto5}}</textarea> <br>
+                      <label for="dateOfBirth"><h6 style="color:#9b9922">Proyecto 7</h6></label>
+                      <textarea id="dateOfBirth" name="proyecto6" [(ngModel)]="editarProyecto.proyecto6" class="form-control">{{miPorfolio4.proyecto6}}</textarea> <br>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+                
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarProyecto1()" (click)="modal.close('Save click')">Guardar</button>
+              </div>
+            </ng-template>
+            <h2 id="proyectos">{{miPorfolio4.titulo}}</h2>
+         
+            <span *ngIf="ha== false else abrielcoso"></span>
+    <ng-template #abrielcoso>
+            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open5(content5)">Editar</button>
+    </ng-template>
+            <br> <br>
+            <h4 style="text-align: center;">{{miPorfolio4.proyecto}}</h4>
+            <br>
+            <img src="assets/imgs/qr-porfolio.png" class="img-fluid mx-auto d-block" style="width: 200px; border: 10px solid black;" alt="">
+            <br>
+            <h4 style="text-align: center;">{{miPorfolio4.proyecto1}}</h4>
+            <br>
+            <img src="assets/imgs/qr-backend.png" class="img-fluid mx-auto d-block" style="width: 200px; border: 10px solid black;" alt="">
+            <br>
+            <h4 style="text-align: center;"> {{miPorfolio4.proyecto2}}</h4>
+            <br> 
+            <h4 style="text-align: center;">{{miPorfolio4.proyecto3}}</h4>
+            <br>
+            <h4 style="text-align: center;">{{miPorfolio4.proyecto4}}</h4>
+            <br>
+            <h4 style="text-align: center;">{{miPorfolio4.proyecto5}}</h4>
+            <br>
+            <h4 style="text-align: center;">{{miPorfolio4.proyecto6}}</h4>
+            <br>
+          </div>
+          
+    <!-----------------------------------Fin Proyectos----->    
+          </div>
+         
+    

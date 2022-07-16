@@ -1,0 +1,170 @@
+<div id="cuerpo" class="col-ms-12 col-xs-12">
+  <br><br><br>
+    <div class="container card" style="margin:0 auto ;" id="card">
+     
+      <h2 id="acerca" >Sobre Mi</h2>
+      <div class="container"> 
+        <span *ngIf="ha== false else abrielcoso3"></span>
+        <ng-template #abrielcoso3>
+        <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open1(content1)">Editar Sobre Mi</button>
+        </ng-template>
+        <ng-template #content1 let-modal>
+          <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
+            <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+          </div>
+          <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+            <form>
+              <div class="mb-3">
+                <div class="input-group">
+                  <div class="container">
+                    <label for="dateOfBirth"><h6 style="color:#9b9922">Datos</h6></label>
+                  <textarea id="dateOfBirth" name="datos" [(ngModel)]="editarSobremi.datos" class="form-control">{{miPorfolio1.datos}}</textarea> <br>
+                </div>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+          <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+            <button type="button" id="btn" (click)="borrarSobremi()" class="btn btn-warning">Borrar datos</button>
+            <button type="button" id="btn" class="btn btn-warning" (click)="editarSobre()" (click)="modal.close('Save click')">Guardar</button>
+          </div>
+        </ng-template>
+        <br> <br>
+      </div>
+      <p style="text-align: justify;">{{miPorfolio1.datos}}</p>
+    </div>
+    <br> <br> <br> <br><br>
+
+      <div class="container-fluid">
+        <ng-template #content8 let-modal>
+          <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Actualizar Títulos</h4>
+            <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+          </div>
+          <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+            <form>
+              <div class="mb-3">
+                <div class="input-group">
+                  <div class="container">
+                    <label ><h6 style="color:#9b9922">Titulo 1</h6></label>
+                  <textarea  name="titulo" [(ngModel)]="editarTitulos.titulo" class="form-control">{{miPorfolio2.titulo}}</textarea> <br>
+                  <label ><h6 style="color:#9b9922">Titulo 2</h6></label>
+                  <textarea  name="titulo1" [(ngModel)]="editarTitulos.titulo1" class="form-control">{{miPorfolio2.titulo1}}</textarea> <br>
+                  <label ><h6 style="color:#9b9922">Titulo 3</h6></label>
+                  <textarea  name="titulo2" [(ngModel)]="editarTitulos.titulo2" class="form-control">{{miPorfolio2.titulo2}}</textarea> <br>
+                  <label ><h6 style="color:#9b9922">Titulo 4</h6></label>
+                  <textarea  name="titulo3" [(ngModel)]="editarTitulos.titulo3" class="form-control">{{miPorfolio2.titulo3}}</textarea> <br>
+                  <label ><h6 style="color:#9b9922">Titulo 5</h6></label>
+                  <textarea  name="titulo4" [(ngModel)]="editarTitulos.titulo4" class="form-control">{{miPorfolio2.titulo4}}</textarea> <br>
+                </div>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+          <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+            
+            <button type="button" id="btn" class="btn btn-warning" (click)="editarTitulos1()" (click)="modal.close('Save click')">Guardar</button>
+          </div>
+        </ng-template>
+        <span *ngIf="ha== false else abrielcoso"></span>
+        <ng-template #abrielcoso>
+        <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open8(content8)">Editar Titulos</button>
+        </ng-template>
+        <br>  <br>  
+        <div class="row" style="text-align: center;">
+          <div class="col md-3">
+            <h4 style="font-weight: 700;">{{miPorfolio2.titulo}}</h4>
+            <br>
+            <div class="uncuyo"><img src="assets/imgs/uncuyo.png" alt=""></div>
+          </div>
+          <div class="col md-6">
+            <h4 style="font-weight: 700;">{{miPorfolio2.titulo1}}</h4>
+            <div class="uncuyo"><img src="assets/imgs/ausa.png" alt=""></div>
+          </div>
+          <div class="col md-6">
+            <h4 style="font-weight: 700;">{{miPorfolio2.titulo2}}</h4>
+            <div class="ap"><img src="assets/imgs/AP.png" alt=""></div>
+          </div>
+          <div class="col md-6">
+            <h4 style="font-weight: 700;">{{miPorfolio2.titulo3}}</h4>
+            <div class="ap"><img src="assets/imgs/cct.png" alt=""></div>
+          </div>
+
+      </div> 
+
+<!---------------------------Experiencia y educación-->
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-6 col-ms-12">
+            <span *ngIf="ha== false else abrielcoso2"></span>
+    <ng-template #abrielcoso2>
+            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open2(content2)">Editar Educación</button>
+    </ng-template>
+            <ng-template #content2 let-modal>
+              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Actualizar Educación</h4>
+                <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <div class="container">
+                        <label for="dateOfBirth"><h6 style="color:#9b9922">Educación</h6></label>
+                      <textarea id="dateOfBirth" name="datos" [(ngModel)]="editarEducacion.datos"  class="form-control">{{miPorfolio3.datos}}</textarea> <br>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+                
+                <button type="button" id="btn" (click)="borrarEducacion()" class="btn btn-warning">Borrar datos</button>
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarEducacion1()" (click)="modal.close('Save click')">Guardar</button>
+               
+              </div>
+            </ng-template> 
+            <h2 id="educacion">{{miPorfolio3.titulo}}</h2>
+            <p style="text-align: justify;">{{miPorfolio3.datos}}</p>
+          </div>
+          <div class="col-md-6 col-ms-12">
+            <span *ngIf="ha== false else abrielcoso1"></span>
+            <ng-template #abrielcoso1>
+            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open3(content3)">Editar Experiencia</button>
+            </ng-template>
+            <ng-template #content3 let-modal>
+              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Actualizar Experiencia</h4>
+                <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <div class="container">
+                        <label for="dateOfBirth"><h6 style="color:#9b9922">Experiencia</h6></label>
+                      <textarea id="dateOfBirth" name="datos1" [(ngModel)]="editarEducacion.datos1" class="form-control">{{miPorfolio3.datos1}}</textarea> <br>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+              <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
+                <button type="button" id="btn" (click)="borrarEducacion1()" class="btn btn-warning">Borrar datos</button>
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarEducacion1()" (click)="modal.close('Save click')">Guardar</button>
+              </div>
+            </ng-template> 
+           
+            <h2 id="experiencia">{{miPorfolio3.titulo1}} </h2>
+            <p style="text-align: justify;">{{miPorfolio3.datos1}}</p>
+          </div>
+        </div>
+      </div>
+      <br><br>
+<!---------------------Fin de Educación y Experiencia-->
