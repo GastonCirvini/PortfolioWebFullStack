@@ -445,3 +445,16 @@ color: white;
     color: white;
     border: 1px solid #9b9922;
 }
+
+.drives {
+    display:0 auto;
+    
+    :hover {
+        color: #9b9922;
+        transition: 0.5s;
+    }
+}
+.fafafa {
+    color:#9b9922;
+    font-size: 30px;
+}
