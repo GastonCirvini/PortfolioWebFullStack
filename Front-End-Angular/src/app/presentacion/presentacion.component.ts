@@ -1,5 +1,5 @@
 
-import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { HttpClient} from '@angular/common/http';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
@@ -17,6 +17,8 @@ export class PresentacionComponent implements OnInit {
   miPorfolio7:any;
   ha:boolean =false;
   closeResult= '';
+
+  @ViewChild ('img',{static:true})imgrepresentativa!:ElementRef<HTMLDivElement>;
   
   editarPresentacion: Presentacion = {nombreytitulo:"", nacimiento:"",edad:"",estudios: "",estudios2:"",residencia:"",estudios3:"", estudios4:"",email:""};
   editarImagenes: Imagen = {perfil:"",portada:""}
@@ -129,6 +131,14 @@ editarImagenes3(){
           this.ha = true
             console.log("Este está en body y el ha está en :"+this.ha)
           }
+      this.imgrepresentativa.nativeElement.style.background="url("+this.miPorfolio7.portada+")"
+      this.imgrepresentativa.nativeElement.style.backgroundAttachment="fixed"
+      this.imgrepresentativa.nativeElement.style.backgroundSize="cover"
+      this.imgrepresentativa.nativeElement.style.backgroundRepeat="no-repeat"
+      this.imgrepresentativa.nativeElement.style.width="0 auto"
+      this.imgrepresentativa.nativeElement.style.height="400px"
+      this.imgrepresentativa.nativeElement.style.paddingTop="600px"
+
         }
         borrarPresentacion(){
           this.editarPresentacion.email = "";
