@@ -138,6 +138,7 @@ editarImagenes3(){
       this.imgrepresentativa.nativeElement.style.width="0 auto"
       this.imgrepresentativa.nativeElement.style.height="400px"
       this.imgrepresentativa.nativeElement.style.paddingTop="600px"
+    
 
         }
         borrarPresentacion(){

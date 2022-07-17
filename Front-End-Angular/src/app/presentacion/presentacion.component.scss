@@ -460,3 +460,9 @@ color: white;
   
 }
 
+.pepito {
+    @media (max-width:"1011px") {
+        display: none ;
+        
+    }
+}
