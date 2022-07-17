@@ -6,10 +6,10 @@
       <div class="container"> 
         <span *ngIf="ha== false else abrielcoso3"></span>
         <ng-template #abrielcoso3>
-        <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open1(content1)">Editar Sobre Mi</button>
+        <button class="btn btn-lg btn-outline-primary" id="btn" style="padding:7px ;" (click)="open1(content1)">Editar Sobre Mi</button>
         </ng-template>
         <ng-template #content1 let-modal>
-          <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+          <div style="background-color:rgb(73, 52, 90); padding: 15px;" class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
             <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
           </div>
@@ -39,7 +39,7 @@
 
       <div class="container-fluid">
         <ng-template #content8 let-modal>
-          <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+          <div style="background-color:rgb(73, 52, 90); padding:15px" class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Actualizar Títulos</h4>
             <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
           </div>
@@ -66,12 +66,12 @@
           </div>
           <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
             
-            <button type="button" id="btn" class="btn btn-warning" (click)="editarTitulos1()" (click)="modal.close('Save click')">Guardar</button>
+            <button type="button" id="btn" class="btn btn-warning" (click)="editarTitulos1()" style="padding:7px" (click)="modal.close('Save click')">Guardar</button>
           </div>
         </ng-template>
         <span *ngIf="ha== false else abrielcoso"></span>
         <ng-template #abrielcoso>
-        <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open8(content8)">Editar Titulos</button>
+        <button class="btn btn-lg btn-outline-primary" style="padding:7px" id="btn" (click)="open8(content8)">Editar Titulos</button>
         </ng-template>
         <br>  <br>  
         <div class="row" style="text-align: center;">
@@ -102,10 +102,10 @@
           <div class="col-md-6 col-ms-12">
             <span *ngIf="ha== false else abrielcoso2"></span>
     <ng-template #abrielcoso2>
-            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open2(content2)">Editar Educación</button>
+            <button class="btn btn-lg btn-outline-primary" id="btn" style="padding:7px" (click)="open2(content2)">Editar Educación</button>
     </ng-template>
             <ng-template #content2 let-modal>
-              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+              <div style="background-color:rgb(73, 52, 90);padding:15px" class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Actualizar Educación</h4>
                 <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
               </div>
@@ -115,7 +115,7 @@
                     <div class="input-group">
                       <div class="container">
                         <label for="dateOfBirth"><h6 style="color:#9b9922">Educación</h6></label>
-                      <textarea id="dateOfBirth" name="datos" [(ngModel)]="editarEducacion.datos"  class="form-control">{{miPorfolio3.datos}}</textarea> <br>
+                      <textarea id="dateOfBirth" name="datos" [(ngModel)]="editarEducacion.datos" class="form-control">{{miPorfolio3.datos}}</textarea> <br>
                     </div>
                     </div>
                   </div>
@@ -124,21 +124,24 @@
               </div>
               <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
                 
-                <button type="button" id="btn" (click)="borrarEducacion()" class="btn btn-warning">Borrar datos</button>
+                <button type="button" id="btn" (click)="borrarEducacion()" style="padding:7px" class="btn btn-warning">Borrar datos</button>
                 <button type="button" id="btn" class="btn btn-warning" (click)="editarEducacion1()" (click)="modal.close('Save click')">Guardar</button>
                
               </div>
             </ng-template> 
-            <h2 id="educacion">{{miPorfolio3.titulo}}</h2>
-            <p style="text-align: justify;">{{miPorfolio3.datos}}</p>
+            <h2 id="educacion" >{{miPorfolio3.titulo}}</h2>
+           
+
+              <p style="text-align: justify;padding-right: 30px ; padding-left: 30px;">{{miPorfolio3.datos}}</p>
+          
           </div>
           <div class="col-md-6 col-ms-12">
             <span *ngIf="ha== false else abrielcoso1"></span>
             <ng-template #abrielcoso1>
-            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open3(content3)">Editar Experiencia</button>
+            <button class="btn btn-lg btn-outline-primary" id="btn" style="padding:7px" (click)="open3(content3)">Editar Experiencia</button>
             </ng-template>
             <ng-template #content3 let-modal>
-              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+              <div style="background-color:rgb(73, 52, 90); padding:15px" class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Actualizar Experiencia</h4>
                 <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
               </div>
@@ -156,13 +159,13 @@
                 
               </div>
               <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
-                <button type="button" id="btn" (click)="borrarEducacion1()" class="btn btn-warning">Borrar datos</button>
-                <button type="button" id="btn" class="btn btn-warning" (click)="editarEducacion1()" (click)="modal.close('Save click')">Guardar</button>
+                <button type="button" id="btn" (click)="borrarEducacion1()" style="padding:7px" class="btn btn-warning">Borrar datos</button>
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarEducacion1()" style="padding:7px" (click)="modal.close('Save click')">Guardar</button>
               </div>
             </ng-template> 
            
             <h2 id="experiencia">{{miPorfolio3.titulo1}} </h2>
-            <p style="text-align: justify;">{{miPorfolio3.datos1}}</p>
+            <p style="text-align: justify; padding-right: 30px; padding-left: 30px;">{{miPorfolio3.datos1}}</p>
           </div>
         </div>
       </div>

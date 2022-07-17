@@ -2,7 +2,7 @@
 
           <div id="proyectoscaja" class="container-fluid">
             <ng-template #content5 let-modal>
-              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+              <div style="background-color:rgb(73, 52, 90); padding:15px" class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Actualizar Proyectos</h4>
                 <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
               </div>
@@ -11,6 +11,7 @@
                   <div class="mb-3">
                     <div class="input-group">
                       <div class="container">
+                        <br>
                         <label for="dateOfBirth"><h6 style="color:#9b9922">Titulo</h6></label>
                         <textarea id="dateOfBirth" name="titulo" [(ngModel)]="editarProyecto.titulo" class="form-control">{{miPorfolio4.titulo}}</textarea> <br>
                         <label for="dateOfBirth" ><h6 style="color:#9b9922">Proyecto 1</h6></label>
@@ -35,14 +36,14 @@
               </div>
               <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
                 
-                <button type="button" id="btn" class="btn btn-warning" (click)="editarProyecto1()" (click)="modal.close('Save click')">Guardar</button>
+                <button type="button" id="btn" class="btn btn-warning" style="padding:7px" (click)="editarProyecto1()" (click)="modal.close('Save click')">Guardar</button>
               </div>
             </ng-template>
             <h2 id="proyectos">{{miPorfolio4.titulo}}</h2>
          
             <span *ngIf="ha== false else abrielcoso"></span>
     <ng-template #abrielcoso>
-            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open5(content5)">Editar</button>
+            <button class="btn btn-lg btn-outline-primary" id="btn" style="padding:7px" (click)="open5(content5)">Editar</button>
     </ng-template>
             <br> <br>
             <h4 style="text-align: center;">{{miPorfolio4.proyecto}}</h4>

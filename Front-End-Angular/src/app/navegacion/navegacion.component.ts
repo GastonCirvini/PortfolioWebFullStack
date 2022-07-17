@@ -14,6 +14,10 @@ import {MenuItem} from 'primeng/api';
 })
 export class NavegacionComponent implements OnInit {
  
+  constructor( private modalService: NgbModal) {
+
+  }
+
     ngOnInit() {
    
     }

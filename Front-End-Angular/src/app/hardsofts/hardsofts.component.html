@@ -9,7 +9,7 @@
             <h2 style="font-family: Barlow; font-size: 35px; text-align: center;">Soft Skills</h2>
             <span *ngIf="ha== false else abrielcoso1"></span>
     <ng-template #abrielcoso1>
-            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open4(content4)">Editar</button>
+            <button class="btn btn-lg btn-outline-primary" id="btn" style="padding:7px" (click)="open4(content4)">Editar</button>
             </ng-template>
             <br> <br>
     
@@ -18,7 +18,7 @@
           
           <div class="container" style="margin:0 auto ;">
             <ng-template #content4 let-modal>
-              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+              <div style="background-color:rgb(73, 52, 90); padding:15px" class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Actualizar Softs Skills</h4>
                 <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
               </div>
@@ -26,7 +26,7 @@
                 <form>
                   <div class="mb-3">
                     <div class="input-group">
-                      <div class="container">
+                      <div class="container ms-2">
                         <label for="dateOfBirth"><h3 style="color:#9b9922">Título</h3></label>
                         <textarea id="dateOfBirth" name="trabajotitulo" [(ngModel)]="editarSofts1.trabajotitulo" class="form-control"></textarea> <br>
                         <label for="dateOfBirth"><h6 style="color:#9b9922">Datos</h6></label>
@@ -50,8 +50,8 @@
                 
               </div>
               <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
-                <button type="button" id="btn" class="btn btn-warning">Borrar datos</button>
-                <button type="button" id="btn" class="btn btn-warning" (click)="editarSofts()" (click)="modal.close('Save click')">Guardar</button>
+                <button type="button" id="btn" class="btn btn-warning" style="padding:7px">Borrar datos</button>
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarSofts()" style="padding:7px" (click)="modal.close('Save click')">Guardar</button>
               </div>
             </ng-template> 
             
@@ -124,7 +124,7 @@
           <br><br>
           
           <ng-template #content9 let-modal>
-              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+              <div style="background-color:rgb(73, 52, 90); padding:15px" class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
                
                 <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
@@ -169,7 +169,7 @@
             <br><br>
             <h2 style="font-family: Barlow; font-size: 25px; text-align: center;">Front End</h2>
             <ng-template #content10 let-modal>
-              <div style="background-color:rgb(73, 52, 90);" class="modal-header">
+              <div style="background-color:rgb(73, 52, 90); padding:15px" class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Actualizar Datos</h4>
                 <button type="button" style="border: #9b9922; ;" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
               </div>
@@ -196,12 +196,12 @@
                 
               </div>
               <div style="background-color: rgb(31, 21, 39);" class="modal-footer">
-                <button type="button" id="btn" class="btn btn-warning" (click)="editarHardSkills1()" (click)="modal.close('Save click')">Guardar</button>
+                <button type="button" id="btn" class="btn btn-warning" (click)="editarHardSkills1()" style="padding:7px" (click)="modal.close('Save click')">Guardar</button>
               </div>
             </ng-template>
             <span *ngIf="ha== false else abrielcoso2"></span>
             <ng-template #abrielcoso2>
-            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open9(content9)">Editar</button>
+            <button class="btn btn-lg btn-outline-primary" id="btn"  style="padding:7px"(click)="open9(content9)">Editar</button>
             </ng-template>
             <br><br>
             <h3>JavaScript</h3> <i id="javascript" class="fa-brands fa-js-square"></i>
@@ -243,7 +243,7 @@
             <h2 style="font-family: Barlow; font-size: 25px; text-align: center;"> Back End</h2>
             <span *ngIf="ha== false else abrielcoso"></span>
             <ng-template #abrielcoso>
-            <button class="btn btn-lg btn-outline-primary" id="btn" (click)="open10(content10)">Editar</button>
+            <button class="btn btn-lg btn-outline-primary" id="btn" style="padding:7px" (click)="open10(content10)">Editar</button>
             </ng-template>
             <br>
             <br>
