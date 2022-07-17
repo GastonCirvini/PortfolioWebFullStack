@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
   mostramela=false;
   ocultar = false;
 mostrarse2= true;
+public isMenuCollapsed = true;
+
 ha: boolean = false;
   constructor(private formBuilder:FormBuilder, private autenticacionService:ServicioService, http:HttpClient, private ruta:Router) {
     this.form=this.formBuilder.group({

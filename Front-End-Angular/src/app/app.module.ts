@@ -23,10 +23,11 @@ import { SobremieducacionComponent } from './sobremieducacion/sobremieducacion.c
 import { HardsoftsComponent } from './hardsofts/hardsofts.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
-import { NavegacionComponent } from './navegacion/navegacion.component';
+
 import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import { RoutingModule } from './routing/routing.module';
+
 
 
 
@@ -43,7 +44,6 @@ import { RoutingModule } from './routing/routing.module';
     SobremieducacionComponent,
     HardsoftsComponent,
     ProyectosComponent,
-    NavegacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,8 +58,9 @@ import { RoutingModule } from './routing/routing.module';
     HttpClientModule,
     FileUploadModule,
     NgxSpinnerModule,
-    RoutingModule
-  ],
+    RoutingModule,
+  
+ ],
   providers: [ServicioService, {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })

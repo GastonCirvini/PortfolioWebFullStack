@@ -45,7 +45,42 @@
           </ng-template>
     </ul>
     
+  </nav>
+  <div class="img-Div main-menu__item">
+  </div>
   
+
+    <nav class="navbar navbar-expand-lg  mb-3"  style="background: rgb(73, 52, 90); margin-top: -32px; margin-bottom: -60px;" >
+      <div class="container-fluid" style="background-color:rgb(73, 52, 90); margin-bottom: -24px;" >
+        <h3 class="navbar-brand" style="font-family: Barlow; color:#9b9922; font-size: 30px; font-weight: 600; text-shadow: 2px 2px black;  ">Portfolio</h3>
+        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+          &#9776;
+        </button>
+        
+        <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+        <div  [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse row text-center d-flex justify-content-center" style="text-align:center; background-color: rgb(73, 52, 90); ">
+          <ul class="navbar-nav" style="background-color:rgb(73, 52, 90);">
+            <li class="nav-item active col-ms-3 text-center" style="margin:0 auto">
+              <!-- Step 4: Close the menu when a link is clicked. -->
+              <a class="nav-link clicks  justify-content-center " style="font-family: Barlow; color:#9b9922; font-size: 25px; " routerLink="/presentacion" (click)="isMenuCollapsed = true">Presentación</a>
+            </li>
+            <li class="nav-item col-ms-3" style="margin:0 auto">
+              <a class="nav-link " style="font-family: Barlow; color:#9b9922; font-size: 25px;" routerLink="/sobremi" (click)="isMenuCollapsed = true">Sobre Mi</a>
+            </li>
+            <li class="nav-item col-ms-3 " style="margin:0 auto">
+              <a class="nav-link" style="font-family: Barlow; color:#9b9922; font-size: 25px;" routerLink="/skills" (click)="isMenuCollapsed = true">Skills</a>
+            </li>
+            <li class="nav-item col-ms-3" style="margin:0 auto">
+              <a class="nav-link" style="font-family: Barlow; color:#9b9922; font-size: 25px;" routerLink="/proyectos" (click)="isMenuCollapsed = true">Proyectos</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    
     <div *ngIf="ocultar" class="row justify-content-center align-items-center">
         <div class="card card-title text-white" style="width:18rem;">
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
@@ -66,10 +101,6 @@
        
        
       
-</nav>
-<div class="img-Div">
-  <div class="img1"></div>
-</div>
 <!-- <img class="img-Represent" src="img/2.png" alt=""> //comentada por ahora (pruebas) -->
 
 <!-- ===== FIN HEADER =====-->

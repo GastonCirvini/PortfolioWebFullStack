@@ -12,7 +12,7 @@
                     <div class="input-group">
                       <div class="container">
                         <br>
-                        <label for="dateOfBirth"><h6 style="color:#9b9922">Titulo</h6></label>
+                        <label for="dateOfBirth"><h6 style="color:#9b9922;">Titulo</h6></label>
                         <textarea id="dateOfBirth" name="titulo" [(ngModel)]="editarProyecto.titulo" class="form-control">{{miPorfolio4.titulo}}</textarea> <br>
                         <label for="dateOfBirth" ><h6 style="color:#9b9922">Proyecto 1</h6></label>
                       <textarea id="dateOfBirth"name="proyecto" [(ngModel)]="editarProyecto.proyecto" class="form-control">{{miPorfolio4.proyecto}}</textarea> <br>
@@ -39,7 +39,8 @@
                 <button type="button" id="btn" class="btn btn-warning" style="padding:7px" (click)="editarProyecto1()" (click)="modal.close('Save click')">Guardar</button>
               </div>
             </ng-template>
-            <h2 id="proyectos">{{miPorfolio4.titulo}}</h2>
+            <br><br>
+            <h2 id="proyectos" style="text-align:center ;">{{miPorfolio4.titulo}}</h2>
          
             <span *ngIf="ha== false else abrielcoso"></span>
     <ng-template #abrielcoso>
